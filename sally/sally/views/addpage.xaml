@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="sally.views.addPage">
+    <ContentPage.BindingContext>
+        <VM:AddViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="Enter p Name" Text="{Binding Name}"/>
+            <Entry Placeholder="Enter Student Age" Text="{Binding Age}"/>
+            <Picker Title="Select Gender" ItemsSource="{Binding Gender}" SelectedItem="{Binding SelectGender}"/>
+            <Button Text="Add" Command="{Binding AddItemCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+    </ContentPage>

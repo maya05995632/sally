@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="patient"
+             xmlns:VM="clr-namespace:sally.view_models"
+             x:Class="sally.MainPage">
+    <!--ContentPage.BindingContext>
+    <VM:MainViewModels/>
+    </ContentPage.BindingContext>-->
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Button Text="add" Command="{Binding AddItemCommand}"/>
+        <ListView ItemsSource="{Binding patient}"HorizontalOptions="FillAndExpand"VerticalOptions="FillAndExpand"/>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Name}" TextColor="Pink" Detail="{Binding Age}"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+
+    </StackLayout>
+
+</ContentPage>
