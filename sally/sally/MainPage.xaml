@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" Title="patient"
-             xmlns:VM="clr-namespace:sally.view_models"
+             xmlns:VM="clr-namespace:sally.viewmodels"
              x:Class="sally.MainPage">
     <!--ContentPage.BindingContext>
     <VM:MainViewModels/>
@@ -12,14 +12,12 @@
     <StackLayout>
         <!-- Place new controls here -->
         <Button Text="add" Command="{Binding AddItemCommand}"/>
-        <ListView ItemsSource="{Binding patient}"HorizontalOptions="FillAndExpand"VerticalOptions="FillAndExpand"/>
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="{Binding Name}" TextColor="Pink" Detail="{Binding Age}"/>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-
-
+        <ListView ItemsSource="{Binding patient}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" TextColor="Pink" Detail="{Binding Age}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
-
 </ContentPage>

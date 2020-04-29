@@ -4,9 +4,10 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="sally.views.addPage">
+             xmlns:VM="clr-namespace:sally.viewmodels"
+             x:Class="sally.views.AddPage">
     <ContentPage.BindingContext>
-        <VM:AddViewModel/>
+        <VM:addViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>

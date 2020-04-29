@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace sally.view_models
+namespace sally.viewmodels
 {
       public class addViewModel
     {
@@ -18,8 +18,8 @@ namespace sally.view_models
         }
         public System.Windows.Input.ICommand AddItemCommand => new Xamarin.Forms.Command(() =>
         {
-            var dbcontext = new services.DatabaseContext();
-            var model = new Models.patient
+            var dbcontext = new Services.databaseContext();
+            var model = new models.patient
             {
                 Name = this.Name,
                 Age = int.Parse(Age),
@@ -28,6 +28,6 @@ namespace sally.view_models
             dbcontext.patient.Add(model);
             dbcontext.SaveChanges();
             Xamarin.Forms.Application.Current.MainPage.Navigation.PopAsync();
-        }
+        });
     }
 }
